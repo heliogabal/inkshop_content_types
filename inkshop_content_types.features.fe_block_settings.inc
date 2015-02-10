@@ -20,7 +20,8 @@ function inkshop_content_types_default_fe_block_settings() {
     'machine_name' => 'suedlink_abo_werbung',
     'module' => 'block',
     'node_types' => array(),
-    'pages' => 'checkout/*',
+    'pages' => '<front>
+node/1422',
     'roles' => array(),
     'themes' => array(
       'adminimal' => array(
@@ -29,11 +30,11 @@ function inkshop_content_types_default_fe_block_settings() {
         'theme' => 'adminimal',
         'weight' => -39,
       ),
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
+      'inkshop' => array(
+        'region' => 'sidebar_second',
+        'status' => 1,
+        'theme' => 'inkshop',
+        'weight' => -39,
       ),
       'inkshop_theme' => array(
         'region' => 'sidebar_second',
@@ -47,12 +48,6 @@ function inkshop_content_types_default_fe_block_settings() {
         'theme' => 'omega',
         'weight' => 0,
       ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
       'shiny' => array(
         'region' => '',
         'status' => 0,
@@ -61,7 +56,7 @@ function inkshop_content_types_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   return $export;

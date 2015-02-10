@@ -75,6 +75,7 @@ function inkshop_content_types_field_default_field_instances() {
     'label' => 'Product Reference',
     'required' => 1,
     'settings' => array(
+      'exclude_cv' => FALSE,
       'field_injection' => 1,
       'referenceable_types' => array(
         'abo' => 0,
@@ -150,6 +151,7 @@ function inkshop_content_types_field_default_field_instances() {
     'product_catalog' => 0,
     'required' => 0,
     'settings' => array(
+      'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -207,6 +209,7 @@ function inkshop_content_types_field_default_field_instances() {
     'label' => 'Ähnliche Produkte',
     'required' => 0,
     'settings' => array(
+      'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -289,6 +292,7 @@ function inkshop_content_types_field_default_field_instances() {
     'product_catalog' => 1,
     'required' => 0,
     'settings' => array(
+      'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -348,6 +352,7 @@ function inkshop_content_types_field_default_field_instances() {
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
+      'exclude_cv' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -407,6 +412,7 @@ function inkshop_content_types_field_default_field_instances() {
     'product_catalog' => 1,
     'required' => 0,
     'settings' => array(
+      'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -466,6 +472,7 @@ function inkshop_content_types_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
+      'exclude_cv' => FALSE,
       'file_directory' => 'pdfs',
       'file_extensions' => 'pdf',
       'max_filesize' => '',
@@ -547,6 +554,7 @@ function inkshop_content_types_field_default_field_instances() {
     'product_catalog' => 1,
     'required' => 0,
     'settings' => array(
+      'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -609,6 +617,7 @@ function inkshop_content_types_field_default_field_instances() {
     'product_catalog' => 0,
     'required' => 0,
     'settings' => array(
+      'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -671,6 +680,7 @@ function inkshop_content_types_field_default_field_instances() {
     'label' => 'Title',
     'required' => TRUE,
     'settings' => array(
+      'exclude_cv' => FALSE,
       'hide_label' => array(
         'entity' => FALSE,
         'page' => FALSE,
@@ -724,6 +734,7 @@ function inkshop_content_types_field_default_field_instances() {
     'required' => FALSE,
     'settings' => array(
       'display_summary' => TRUE,
+      'exclude_cv' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -776,6 +787,7 @@ function inkshop_content_types_field_default_field_instances() {
     'label' => 'Product variations',
     'required' => 0,
     'settings' => array(
+      'exclude_cv' => FALSE,
       'field_injection' => 1,
       'referenceable_types' => array(
         'commerce_contribution' => 0,
