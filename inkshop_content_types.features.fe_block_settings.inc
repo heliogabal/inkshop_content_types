@@ -59,5 +59,51 @@ node/1422',
     'visibility' => 1,
   );
 
+  $export['webform-client-block-1422'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'client-block-1422',
+    'icon' => 'a:2:{s:4:"icon";s:0:"";s:8:"position";s:12:"title_before";}',
+    'module' => 'webform',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'inkshop' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'inkshop',
+        'weight' => -35,
+      ),
+      'inkshop_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'inkshop_theme',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'shiny' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'shiny',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   return $export;
 }
