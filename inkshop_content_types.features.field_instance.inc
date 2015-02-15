@@ -71,6 +71,7 @@ function inkshop_content_types_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
+    'exclude_cv' => 0,
     'field_name' => 'field_commerce_product',
     'label' => 'Product Reference',
     'required' => 1,
@@ -78,11 +79,8 @@ function inkshop_content_types_field_default_field_instances() {
       'exclude_cv' => FALSE,
       'field_injection' => 1,
       'referenceable_types' => array(
-        'abo' => 0,
-        'commerce_contribution' => 0,
         'donation' => 0,
         'product' => 'product',
-        'recurring' => 0,
       ),
       'user_register_form' => FALSE,
     ),
@@ -161,7 +159,7 @@ function inkshop_content_types_field_default_field_instances() {
         'apply_chosen' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -348,11 +346,16 @@ function inkshop_content_types_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
+    'exclude_cv' => 0,
     'field_name' => 'field_pd_description',
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
       'exclude_cv' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -360,7 +363,7 @@ function inkshop_content_types_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 15,
       ),
       'type' => 'text_textarea',
       'weight' => 2,
@@ -424,7 +427,7 @@ function inkshop_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
@@ -549,6 +552,7 @@ function inkshop_content_types_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
+    'exclude_cv' => 0,
     'field_name' => 'field_pd_type',
     'label' => 'Format',
     'product_catalog' => 1,
@@ -563,7 +567,7 @@ function inkshop_content_types_field_default_field_instances() {
       'settings' => array(
         'apply_chosen' => '',
       ),
-      'type' => 'options_select',
+      'type' => 'options_buttons',
       'weight' => 7,
     ),
   );
@@ -628,7 +632,7 @@ function inkshop_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 

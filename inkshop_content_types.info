@@ -1,9 +1,7 @@
 name = inkshop Content types
 core = 7.x
-
 package = Features
 version = 7.x-1.12-alpha5
-
 project = inkshop_content_types
 dependencies[] = commerce_cart
 dependencies[] = commerce_product_reference

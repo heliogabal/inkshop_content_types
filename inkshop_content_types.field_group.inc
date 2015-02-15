@@ -21,7 +21,7 @@ function inkshop_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Ähnliche Produkte',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_pd_aehnliche_produkte',
     ),
@@ -77,7 +77,7 @@ function inkshop_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Dateien',
-    'weight' => '3',
+    'weight' => '5',
     'children' => array(
       0 => 'field_pd_pdfs',
     ),

@@ -115,7 +115,7 @@ function inkshop_content_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '5',
+          'weight' => '4',
         ),
         'path' => array(
           'weight' => '6',
