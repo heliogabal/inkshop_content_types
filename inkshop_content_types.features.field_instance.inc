@@ -10,7 +10,7 @@
 function inkshop_content_types_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-product_display-field_commerce_product'
+  // Exported field_instance: 'node-product_display-field_commerce_product'.
   $field_instances['node-product_display-field_commerce_product'] = array(
     'bundle' => 'product_display',
     'default_value' => NULL,
@@ -104,7 +104,7 @@ function inkshop_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-product_display-field_kurzel_buchhaltung'
+  // Exported field_instance: 'node-product_display-field_kurzel_buchhaltung'.
   $field_instances['node-product_display-field_kurzel_buchhaltung'] = array(
     'bundle' => 'product_display',
     'default_value' => NULL,
@@ -163,7 +163,8 @@ function inkshop_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-product_display-field_pd_aehnliche_produkte'
+  // Exported field_instance:
+  // 'node-product_display-field_pd_aehnliche_produkte'.
   $field_instances['node-product_display-field_pd_aehnliche_produkte'] = array(
     'bundle' => 'product_display',
     'default_value' => NULL,
@@ -236,7 +237,7 @@ function inkshop_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-product_display-field_pd_category'
+  // Exported field_instance: 'node-product_display-field_pd_category'.
   $field_instances['node-product_display-field_pd_category'] = array(
     'bundle' => 'product_display',
     'default_value' => NULL,
@@ -305,7 +306,7 @@ function inkshop_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-product_display-field_pd_description'
+  // Exported field_instance: 'node-product_display-field_pd_description'.
   $field_instances['node-product_display-field_pd_description'] = array(
     'bundle' => 'product_display',
     'default_value' => NULL,
@@ -370,7 +371,7 @@ function inkshop_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-product_display-field_pd_kampagne'
+  // Exported field_instance: 'node-product_display-field_pd_kampagne'.
   $field_instances['node-product_display-field_pd_kampagne'] = array(
     'bundle' => 'product_display',
     'default_value' => NULL,
@@ -431,7 +432,7 @@ function inkshop_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-product_display-field_pd_pdfs'
+  // Exported field_instance: 'node-product_display-field_pd_pdfs'.
   $field_instances['node-product_display-field_pd_pdfs'] = array(
     'bundle' => 'product_display',
     'deleted' => 0,
@@ -506,7 +507,7 @@ function inkshop_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-product_display-field_pd_type'
+  // Exported field_instance: 'node-product_display-field_pd_type'.
   $field_instances['node-product_display-field_pd_type'] = array(
     'bundle' => 'product_display',
     'default_value' => NULL,
@@ -572,7 +573,7 @@ function inkshop_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-product_display-field_tags'
+  // Exported field_instance: 'node-product_display-field_tags'.
   $field_instances['node-product_display-field_tags'] = array(
     'bundle' => 'product_display',
     'default_value' => NULL,
@@ -636,7 +637,7 @@ function inkshop_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-product_display-title_field'
+  // Exported field_instance: 'node-product_display-title_field'.
   $field_instances['node-product_display-title_field'] = array(
     'bundle' => 'product_display',
     'default_value' => NULL,
@@ -702,7 +703,7 @@ function inkshop_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-subscription-body'
+  // Exported field_instance: 'node-subscription-body'.
   $field_instances['node-subscription-body'] = array(
     'bundle' => 'subscription',
     'default_value' => NULL,
@@ -753,7 +754,7 @@ function inkshop_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-subscription-field_product'
+  // Exported field_instance: 'node-subscription-field_product'.
   $field_instances['node-subscription-field_product'] = array(
     'bundle' => 'subscription',
     'deleted' => 0,

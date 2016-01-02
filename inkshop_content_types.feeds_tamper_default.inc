@@ -49,6 +49,20 @@ function inkshop_content_types_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'inkota_product_display_import-datasheet-rewrite';
+  $feeds_tamper->importer = 'inkota_product_display_import';
+  $feeds_tamper->source = 'datasheet';
+  $feeds_tamper->plugin_id = 'rewrite';
+  $feeds_tamper->settings = array(
+    'text' => 'https://www.inkota.de/uploads/tx_ttproducts/datasheet/[datasheet]',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Rewrite';
+  $export['inkota_product_display_import-datasheet-rewrite'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'inkota_produkt_import-datasheet-find_replace';
   $feeds_tamper->importer = 'inkota_produkt_import';
   $feeds_tamper->source = 'datasheet';
@@ -65,6 +79,20 @@ function inkshop_content_types_feeds_tamper_default() {
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'replace absolute URL for PDFs with local URL';
   $export['inkota_produkt_import-datasheet-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'inkota_produkt_import-datasheet-rewrite';
+  $feeds_tamper->importer = 'inkota_produkt_import';
+  $feeds_tamper->source = 'datasheet';
+  $feeds_tamper->plugin_id = 'rewrite';
+  $feeds_tamper->settings = array(
+    'text' => 'https://www.inkota.de/uploads/tx_ttproducts/datasheet/[datasheet]',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'INKOTA Url voranstellen';
+  $export['inkota_produkt_import-datasheet-rewrite'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */

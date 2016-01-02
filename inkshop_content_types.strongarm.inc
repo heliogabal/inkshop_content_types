@@ -667,50 +667,6 @@ function inkshop_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'simplify_blocks_global';
-  $strongarm->value = array(
-    0 => 'format',
-  );
-  $export['simplify_blocks_global'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'simplify_nodes_global';
-  $strongarm->value = array(
-    0 => 'format',
-    1 => 'revision',
-    2 => 'path',
-    3 => 'metatag',
-  );
-  $export['simplify_nodes_global'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'simplify_taxonomy_global';
-  $strongarm->value = array(
-    0 => 'format',
-    1 => 'path',
-    2 => 'metatag',
-    3 => 'redirect',
-  );
-  $export['simplify_taxonomy_global'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'simplify_users_global';
-  $strongarm->value = array(
-    0 => 'format',
-    1 => 'metatag',
-    2 => 'redirect',
-  );
-  $export['simplify_users_global'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'webform_blocks';
   $strongarm->value = array(
     'client-block-1422' => array(

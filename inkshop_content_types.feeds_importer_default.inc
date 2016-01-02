@@ -82,7 +82,7 @@ function inkshop_content_types_feeds_importer_default() {
           ),
           7 => array(
             'source' => 'datasheet',
-            'target' => 'field_pd_pdfs',
+            'target' => 'field_pd_pdfs:uri',
             'unique' => FALSE,
           ),
           8 => array(
@@ -100,6 +100,7 @@ function inkshop_content_types_feeds_importer_default() {
         'input_format' => 'html',
         'skip_hash_check' => 0,
         'bundle' => 'product_display',
+        'update_non_existent' => 'skip',
       ),
     ),
     'content_type' => '',
@@ -176,12 +177,12 @@ function inkshop_content_types_feeds_importer_default() {
           ),
           6 => array(
             'source' => 'datasheet',
-            'target' => 'field_product_pdf',
+            'target' => 'field_product_pdf:uri',
             'unique' => FALSE,
           ),
           7 => array(
             'source' => 'image',
-            'target' => 'field_product_image',
+            'target' => 'field_product_image:uri',
             'unique' => FALSE,
           ),
         ),
@@ -189,6 +190,7 @@ function inkshop_content_types_feeds_importer_default() {
         'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'product',
+        'update_non_existent' => 'skip',
       ),
     ),
     'content_type' => '',

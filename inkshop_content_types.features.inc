@@ -36,17 +36,9 @@ function inkshop_content_types_image_default_styles() {
 
   // Exported image style: product_full_image.
   $styles['product_full_image'] = array(
-    'name' => 'product_full_image',
     'label' => 'Product Full Image',
     'effects' => array(
       2 => array(
-        'label' => 'Skalierung',
-        'help' => 'Eine Skalierung behält das Seitenverhältnis des Originalbildes bei. Sofern nur eine Seitenlänge angegeben ist, wird die andere berechnet.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
           'width' => 175,
@@ -60,17 +52,9 @@ function inkshop_content_types_image_default_styles() {
 
   // Exported image style: product_list_image.
   $styles['product_list_image'] = array(
-    'name' => 'product_list_image',
     'label' => 'Product List Image',
     'effects' => array(
       1 => array(
-        'label' => 'Skalierung',
-        'help' => 'Eine Skalierung behält das Seitenverhältnis des Originalbildes bei. Sofern nur eine Seitenlänge angegeben ist, wird die andere berechnet.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
           'width' => '',
