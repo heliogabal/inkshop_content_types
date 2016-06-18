@@ -12,6 +12,47 @@ function inkshop_content_types_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['block-backlink'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'icon' => 'a:2:{s:4:"icon";s:0:"";s:8:"position";s:12:"title_before";}',
+    'machine_name' => 'backlink',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => 'produkt/*
+produkt/*/*',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'inkshop' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'inkshop',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 1,
+  );
+
   $export['block-suedlink_abo_werbung'] = array(
     'cache' => -1,
     'css_class' => '',
@@ -34,12 +75,18 @@ node/1422',
         'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'inkshop',
-        'weight' => -39,
+        'weight' => -37,
       ),
       'omega' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
         'weight' => 0,
       ),
     ),
@@ -74,6 +121,12 @@ node/1422',
         'region' => '',
         'status' => 0,
         'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
         'weight' => 0,
       ),
     ),

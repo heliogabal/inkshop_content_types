@@ -97,6 +97,19 @@ function inkshop_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__page';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__product_display';
   $strongarm->value = array(
     'view_modes' => array(
@@ -155,7 +168,7 @@ function inkshop_content_types_strongarm() {
       'display' => array(
         'product:sku' => array(
           'teaser' => array(
-            'weight' => '26',
+            'weight' => '28',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -177,11 +190,11 @@ function inkshop_content_types_strongarm() {
         ),
         'product:title' => array(
           'teaser' => array(
-            'weight' => '27',
+            'weight' => '29',
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '24',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'flexslider_block' => array(
@@ -199,11 +212,11 @@ function inkshop_content_types_strongarm() {
         ),
         'product:status' => array(
           'teaser' => array(
-            'weight' => '29',
+            'weight' => '31',
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '25',
+            'weight' => '26',
             'visible' => FALSE,
           ),
           'flexslider_block' => array(
@@ -221,11 +234,11 @@ function inkshop_content_types_strongarm() {
         ),
         'product:commerce_price' => array(
           'teaser' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => TRUE,
           ),
           'default' => array(
-            'weight' => '9',
+            'weight' => '8',
             'visible' => TRUE,
           ),
           'flexslider_block' => array(
@@ -243,11 +256,11 @@ function inkshop_content_types_strongarm() {
         ),
         'product:commerce_stock' => array(
           'teaser' => array(
-            'weight' => '8',
+            'weight' => '9',
             'visible' => TRUE,
           ),
           'default' => array(
-            'weight' => '27',
+            'weight' => '28',
             'visible' => FALSE,
           ),
           'flexslider_block' => array(
@@ -265,11 +278,11 @@ function inkshop_content_types_strongarm() {
         ),
         'product:field_physical_weight' => array(
           'teaser' => array(
-            'weight' => '30',
+            'weight' => '32',
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '26',
+            'weight' => '27',
             'visible' => FALSE,
           ),
           'flexslider_block' => array(
@@ -309,7 +322,7 @@ function inkshop_content_types_strongarm() {
         ),
         'product:field_product_pdf' => array(
           'teaser' => array(
-            'weight' => '3',
+            'weight' => '4',
             'visible' => TRUE,
           ),
           'default' => array(
@@ -332,7 +345,7 @@ function inkshop_content_types_strongarm() {
         'product:field_product_subtitle' => array(
           'teaser' => array(
             'weight' => '2',
-            'visible' => TRUE,
+            'visible' => FALSE,
           ),
           'default' => array(
             'weight' => '0',
@@ -353,11 +366,11 @@ function inkshop_content_types_strongarm() {
         ),
         'product:field_product_tax' => array(
           'teaser' => array(
-            'weight' => '5',
+            'weight' => '6',
             'visible' => TRUE,
           ),
           'default' => array(
-            'weight' => '10',
+            'weight' => '9',
             'visible' => TRUE,
           ),
           'flexslider_block' => array(
@@ -393,11 +406,11 @@ function inkshop_content_types_strongarm() {
         ),
         'product:field_wholesale_price' => array(
           'teaser' => array(
-            'weight' => '31',
+            'weight' => '33',
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '30',
+            'weight' => '31',
             'visible' => FALSE,
           ),
           'flexslider_block' => array(
@@ -415,7 +428,7 @@ function inkshop_content_types_strongarm() {
         ),
         'product:commerce_stock_override' => array(
           'default' => array(
-            'weight' => '31',
+            'weight' => '33',
             'visible' => FALSE,
           ),
           'flexslider_block' => array(
@@ -423,7 +436,7 @@ function inkshop_content_types_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '32',
+            'weight' => '34',
             'visible' => FALSE,
           ),
           'aehnliche_produkte' => array(
@@ -461,6 +474,86 @@ function inkshop_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__webform';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'checkout_pane' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'colorbox' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_plain' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_html' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_textalt' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'aehnliche_produkte' => array(
+        'custom_settings' => FALSE,
+      ),
+      'flexslider_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'metatags' => array(
+          'weight' => '6',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '5',
+        ),
+        'redirect' => array(
+          'weight' => '4',
+        ),
+      ),
+      'display' => array(
+        'webform' => array(
+          'default' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_node__webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_page';
+  $strongarm->value = '0';
+  $export['language_content_type_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_product_display';
   $strongarm->value = '0';
   $export['language_content_type_product_display'] = $strongarm;
@@ -471,6 +564,16 @@ function inkshop_content_types_strongarm() {
   $strongarm->name = 'language_content_type_webform';
   $strongarm->value = '0';
   $export['language_content_type_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_page';
+  $strongarm->value = array(
+    0 => 'main-menu',
+    1 => 'menu-pflichtmenu',
+  );
+  $export['menu_options_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -487,6 +590,13 @@ function inkshop_content_types_strongarm() {
     0 => 'main-menu',
   );
   $export['menu_options_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_page';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -534,6 +644,13 @@ function inkshop_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_page';
+  $strongarm->value = '0';
+  $export['node_preview_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_product_display';
   $strongarm->value = '0';
   $export['node_preview_product_display'] = $strongarm;
@@ -544,6 +661,13 @@ function inkshop_content_types_strongarm() {
   $strongarm->name = 'node_preview_webform';
   $strongarm->value = '1';
   $export['node_preview_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_page';
+  $strongarm->value = 0;
+  $export['node_submitted_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

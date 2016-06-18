@@ -18,6 +18,7 @@ function inkshop_content_types_wysiwyg_default_profiles() {
       'default' => 1,
       'user_choose' => 0,
       'show_toggle' => 1,
+      'add_to_summaries' => 1,
       'theme' => '',
       'language' => 'de',
       'buttons' => array(
@@ -26,9 +27,15 @@ function inkshop_content_types_wysiwyg_default_profiles() {
           'Italic' => 1,
           'BulletedList' => 1,
           'NumberedList' => 1,
+          'Source' => 1,
+          'SpellChecker' => 1,
+          'Scayt' => 1,
         ),
         'linkit' => array(
           'linkit' => 1,
+        ),
+        'templates' => array(
+          'Templates' => 1,
         ),
         'drupal' => array(
           'media' => 1,
@@ -38,11 +45,13 @@ function inkshop_content_types_wysiwyg_default_profiles() {
       'resize_enabled' => 1,
       'default_toolbar_grouping' => 1,
       'simple_source_formatting' => 0,
+      'acf_mode' => 0,
+      'acf_allowed_content' => '',
       'css_setting' => 'theme',
       'css_path' => '',
       'stylesSet' => '',
       'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
-      'advanced__active_tab' => 'edit-paste',
+      'advanced__active_tab' => 'edit-basic',
       'forcePasteAsPlainText' => 1,
     ),
   );
@@ -55,6 +64,7 @@ function inkshop_content_types_wysiwyg_default_profiles() {
       'default' => 1,
       'user_choose' => 0,
       'show_toggle' => 0,
+      'add_to_summaries' => 1,
       'theme' => '',
       'language' => 'de',
       'buttons' => array(
@@ -65,9 +75,14 @@ function inkshop_content_types_wysiwyg_default_profiles() {
           'NumberedList' => 1,
           'Source' => 1,
           'Table' => 1,
+          'SpellChecker' => 1,
+          'Scayt' => 1,
         ),
         'linkit' => array(
           'linkit' => 1,
+        ),
+        'templates' => array(
+          'Templates' => 1,
         ),
         'drupal' => array(
           'media' => 1,
@@ -77,11 +92,13 @@ function inkshop_content_types_wysiwyg_default_profiles() {
       'resize_enabled' => 1,
       'default_toolbar_grouping' => 1,
       'simple_source_formatting' => 1,
+      'acf_mode' => 0,
+      'acf_allowed_content' => '',
       'css_setting' => 'theme',
       'css_path' => '',
       'stylesSet' => '',
       'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div,table,th,tr,td,caption',
-      'advanced__active_tab' => 'edit-css',
+      'advanced__active_tab' => 'edit-basic',
       'forcePasteAsPlainText' => 1,
     ),
   );

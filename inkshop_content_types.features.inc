@@ -74,6 +74,14 @@ function inkshop_content_types_image_default_styles() {
  */
 function inkshop_content_types_node_info() {
   $items = array(
+    'page' => array(
+      'name' => t('Page'),
+      'base' => 'node_content',
+      'description' => t('Use <em>pages</em> for basic page content.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'product_display' => array(
       'name' => t('Product Display'),
       'base' => 'node_content',

@@ -22,7 +22,7 @@ function inkshop_content_types_filter_default_formats() {
         'weight' => -50,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <img> <p> <br> <h1> <h2> <h3> <h4> <i>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <div> <img> <p> <br> <h1> <h2> <h3> <h4> <i> <b>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
@@ -69,7 +69,7 @@ function inkshop_content_types_filter_default_formats() {
         'weight' => -50,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <i> <strong> <b> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <img> <p> <br> <h1> <h2> <h3> <h4> <table> <thead> <tbody> <th> <tr> <td> <caption>',
+          'allowed_html' => '<a> <em> <i> <strong> <b> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <img> <div> <p> <br> <h1> <h2> <h3> <h4> <table> <thead> <tbody> <th> <tr> <td> <caption>',
           'filter_html_help' => 0,
           'filter_html_nofollow' => 0,
         ),

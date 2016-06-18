@@ -39,12 +39,12 @@ function inkshop_content_types_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'link_zzgl_versandkosten' => array(
-      'weight' => '11',
+      'weight' => '10',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'new_field' => array(
-      'weight' => '13',
+      'weight' => '12',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -71,7 +71,7 @@ function inkshop_content_types_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
     'link_zzgl_versandkosten' => array(
-      'weight' => '6',
+      'weight' => '7',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -79,7 +79,7 @@ function inkshop_content_types_ds_field_settings_info() {
       ),
     ),
     'new_field' => array(
-      'weight' => '11',
+      'weight' => '12',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -90,23 +90,22 @@ function inkshop_content_types_ds_field_settings_info() {
         ),
       ),
     ),
-  );
-  $export['node|product_display|teaser'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'node|subscription|default';
-  $ds_fieldsetting->entity_type = 'node';
-  $ds_fieldsetting->bundle = 'subscription';
-  $ds_fieldsetting->view_mode = 'default';
-  $ds_fieldsetting->settings = array(
-    'title' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
+    'field_pd_untertitel_liste' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'field-name-field-product-subtitle',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
     ),
   );
-  $export['node|subscription|default'] = $ds_fieldsetting;
+  $export['node|product_display|teaser'] = $ds_fieldsetting;
 
   return $export;
 }
@@ -178,7 +177,7 @@ function inkshop_content_types_ds_custom_fields_info() {
   if (!empty($entity->created)) {
     $now = new DateTime();
     $interval = ($now->format(\'U\') - $entity->created) / 86400;
-    if ($interval <= 120) print "<span class=\\"new\\">Neu!</span>";
+    if ($interval <= 90) print "<span class=\\"new\\">Neu!</span>";
   }
 ?>',
       'format' => 'ds_code',
@@ -217,80 +216,6 @@ function inkshop_content_types_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
-  $ds_layout->id = 'node|product_display|aehnliche_produkte';
-  $ds_layout->entity_type = 'node';
-  $ds_layout->bundle = 'product_display';
-  $ds_layout->view_mode = 'aehnliche_produkte';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'title',
-        1 => 'product:field_product_subtitle',
-        2 => 'product:field_product_image',
-      ),
-    ),
-    'fields' => array(
-      'title' => 'ds_content',
-      'product:field_product_subtitle' => 'ds_content',
-      'product:field_product_image' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['node|product_display|aehnliche_produkte'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'node|product_display|checkout_pane';
-  $ds_layout->entity_type = 'node';
-  $ds_layout->bundle = 'product_display';
-  $ds_layout->view_mode = 'checkout_pane';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'product:field_product_subtitle',
-        1 => 'product:commerce_price',
-        2 => 'product:field_product_image',
-        3 => 'product:field_product_pdf',
-        4 => 'product:field_physical_weight',
-        5 => 'product:commerce_stock',
-        6 => 'product:field_product_tax',
-        7 => 'product:field_wholesale_price',
-        8 => 'product:commerce_stock_override',
-      ),
-    ),
-    'fields' => array(
-      'product:field_product_subtitle' => 'ds_content',
-      'product:commerce_price' => 'ds_content',
-      'product:field_product_image' => 'ds_content',
-      'product:field_product_pdf' => 'ds_content',
-      'product:field_physical_weight' => 'ds_content',
-      'product:commerce_stock' => 'ds_content',
-      'product:field_product_tax' => 'ds_content',
-      'product:field_wholesale_price' => 'ds_content',
-      'product:commerce_stock_override' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['node|product_display|checkout_pane'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|product_display|default';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'product_display';
@@ -318,6 +243,7 @@ function inkshop_content_types_ds_layout_settings_info() {
       ),
       'footer' => array(
         12 => 'new_field',
+        13 => 'field_socialshareprivacy',
       ),
     ),
     'fields' => array(
@@ -334,6 +260,7 @@ function inkshop_content_types_ds_layout_settings_info() {
       'link_zzgl_versandkosten' => 'right',
       'field_commerce_product' => 'right',
       'new_field' => 'footer',
+      'field_socialshareprivacy' => 'footer',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -347,6 +274,7 @@ function inkshop_content_types_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => 0,
   );
   $export['node|product_display|default'] = $ds_layout;
 
@@ -363,45 +291,49 @@ function inkshop_content_types_ds_layout_settings_info() {
         0 => 'group_basis',
         1 => 'group_produkteigenschaften',
         2 => 'title_field',
-        3 => 'field_pd_description',
-        4 => 'group_kategorisierung',
+        3 => 'group_kategorisierung',
+        4 => 'field_pd_untertitel_liste',
         5 => 'group_aehnlich',
-        6 => 'field_commerce_product',
-        10 => 'field_pd_aehnliche_produkte',
+        6 => 'field_pd_description',
+        8 => 'field_commerce_product',
+        11 => 'field_pd_aehnliche_produkte',
         13 => 'field_pd_type',
-        14 => 'field_pd_category',
-        15 => 'field_tags',
-        16 => 'field_kurzel_buchhaltung',
-        17 => 'field_pd_kampagne',
+        15 => 'field_pd_category',
+        16 => 'field_tags',
+        17 => 'field_kurzel_buchhaltung',
+        18 => 'field_pd_kampagne',
       ),
       'hidden' => array(
         7 => 'metatags',
-        8 => 'group_dateien',
-        9 => 'path',
-        11 => 'field_pd_pdfs',
+        9 => 'group_dateien',
+        10 => 'path',
         12 => 'redirect',
-        18 => '_add_existing_field',
+        14 => 'field_pd_pdfs',
+        19 => 'field_socialshareprivacy',
+        20 => '_add_existing_field',
       ),
     ),
     'fields' => array(
       'group_basis' => 'ds_content',
       'group_produkteigenschaften' => 'ds_content',
       'title_field' => 'ds_content',
-      'field_pd_description' => 'ds_content',
       'group_kategorisierung' => 'ds_content',
+      'field_pd_untertitel_liste' => 'ds_content',
       'group_aehnlich' => 'ds_content',
-      'field_commerce_product' => 'ds_content',
+      'field_pd_description' => 'ds_content',
       'metatags' => 'hidden',
+      'field_commerce_product' => 'ds_content',
       'group_dateien' => 'hidden',
       'path' => 'hidden',
       'field_pd_aehnliche_produkte' => 'ds_content',
-      'field_pd_pdfs' => 'hidden',
       'redirect' => 'hidden',
       'field_pd_type' => 'ds_content',
+      'field_pd_pdfs' => 'hidden',
       'field_pd_category' => 'ds_content',
       'field_tags' => 'ds_content',
       'field_kurzel_buchhaltung' => 'ds_content',
       'field_pd_kampagne' => 'ds_content',
+      'field_socialshareprivacy' => 'hidden',
       '_add_existing_field' => 'hidden',
     ),
     'classes' => array(),
@@ -428,7 +360,7 @@ function inkshop_content_types_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'product:field_product_image',
         1 => 'title_field',
-        2 => 'product:field_product_subtitle',
+        2 => 'field_pd_untertitel_liste',
         3 => 'product:field_product_pdf',
         4 => 'product:commerce_price',
         5 => 'product:field_product_tax',
@@ -443,7 +375,7 @@ function inkshop_content_types_ds_layout_settings_info() {
     'fields' => array(
       'product:field_product_image' => 'ds_content',
       'title_field' => 'ds_content',
-      'product:field_product_subtitle' => 'ds_content',
+      'field_pd_untertitel_liste' => 'ds_content',
       'product:field_product_pdf' => 'ds_content',
       'product:commerce_price' => 'ds_content',
       'product:field_product_tax' => 'ds_content',
@@ -465,44 +397,6 @@ function inkshop_content_types_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|product_display|teaser'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'node|subscription|default';
-  $ds_layout->entity_type = 'node';
-  $ds_layout->bundle = 'subscription';
-  $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'title',
-        1 => 'product:commerce_recurring_ini_price',
-        2 => 'body',
-        3 => 'product:field_rec_description',
-        4 => 'product:commerce_price',
-        5 => 'field_product',
-      ),
-    ),
-    'fields' => array(
-      'title' => 'ds_content',
-      'product:commerce_recurring_ini_price' => 'ds_content',
-      'body' => 'ds_content',
-      'product:field_rec_description' => 'ds_content',
-      'product:commerce_price' => 'ds_content',
-      'field_product' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['node|subscription|default'] = $ds_layout;
 
   return $export;
 }
