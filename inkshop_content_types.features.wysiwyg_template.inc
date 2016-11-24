@@ -18,7 +18,7 @@ function inkshop_content_types_wysiwyg_template_default_templates() {
     'format' => 'plain_text',
     'name' => 'finanzhinweis_brot_eed_nsb',
     'content_types' => array(
-      'product_display' => 'Product Display',
+      'product_display' => 'Produktansicht',
     ),
   );
   return $templates;

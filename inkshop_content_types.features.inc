@@ -83,9 +83,9 @@ function inkshop_content_types_node_info() {
       'help' => '',
     ),
     'product_display' => array(
-      'name' => t('Product Display'),
+      'name' => t('Produktansicht'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Eine Produktansicht reichert die allgemeinen Produktdaten (Titel, Gewicht, Preis) mit weiteren Informationen an, und wird benötigt, um ein Produkt mit einem Kaufen-Button sichtbar zu machen.'),
       'has_title' => '1',
       'title_label' => t('Titel'),
       'help' => '',

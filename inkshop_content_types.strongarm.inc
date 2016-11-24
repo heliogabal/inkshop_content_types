@@ -156,13 +156,13 @@ function inkshop_content_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '4',
+          'weight' => '9',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '10',
         ),
         'redirect' => array(
-          'weight' => '7',
+          'weight' => '12',
         ),
       ),
       'display' => array(

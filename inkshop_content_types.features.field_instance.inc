@@ -125,7 +125,7 @@ function inkshop_content_types_field_default_field_instances() {
     'entity_type' => 'node',
     'exclude_cv' => 0,
     'field_name' => 'field_commerce_product',
-    'label' => 'Product Reference',
+    'label' => 'Produktreferenz',
     'required' => 1,
     'settings' => array(
       'exclude_cv' => FALSE,
@@ -142,7 +142,9 @@ function inkshop_content_types_field_default_field_instances() {
       'settings' => array(
         'fields' => array(),
         'type_settings' => array(
+          'allow_clone' => 0,
           'allow_existing' => FALSE,
+          'allow_new' => 1,
           'autogenerate_title' => 1,
           'delete_references' => 1,
           'label_plural' => 'Produkte',
@@ -211,7 +213,7 @@ function inkshop_content_types_field_default_field_instances() {
         'apply_chosen' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 5,
     ),
   );
 
@@ -285,7 +287,7 @@ function inkshop_content_types_field_default_field_instances() {
         ),
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -354,7 +356,7 @@ function inkshop_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'options_buttons',
-      'weight' => 8,
+      'weight' => 3,
     ),
   );
 
@@ -419,7 +421,7 @@ function inkshop_content_types_field_default_field_instances() {
         'rows' => 15,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -473,14 +475,15 @@ function inkshop_content_types_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'options',
+      'module' => 'autocomplete_deluxe',
       'settings' => array(
         'apply_chosen' => 0,
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
         'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
       ),
-      'type' => 'options_select',
-      'weight' => 11,
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 6,
     ),
   );
 
@@ -523,6 +526,7 @@ function inkshop_content_types_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
+    'exclude_cv' => 0,
     'field_name' => 'field_pd_pdfs',
     'label' => 'PDFs',
     'required' => 0,
@@ -539,7 +543,13 @@ function inkshop_content_types_field_default_field_instances() {
       'module' => 'file',
       'settings' => array(
         'filefield_sources' => array(
-          'filefield_sources' => array(),
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'reference' => 0,
+            'remote' => 'remote',
+            'upload' => 'upload',
+          ),
           'source_attach' => array(
             'absolute' => 0,
             'attach_mode' => 'move',
@@ -550,12 +560,13 @@ function inkshop_content_types_field_default_field_instances() {
           ),
           'source_reference' => array(
             'autocomplete' => 0,
+            'search_all_fields' => 0,
           ),
         ),
         'progress_indicator' => 'bar',
       ),
       'type' => 'file_generic',
-      'weight' => 7,
+      'weight' => 11,
     ),
   );
 
@@ -621,71 +632,6 @@ function inkshop_content_types_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_buttons',
-      'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance: 'node-product_display-field_pd_untertitel_liste'.
-  $field_instances['node-product_display-field_pd_untertitel_liste'] = array(
-    'bundle' => 'product_display',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'aehnliche_produkte' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'checkout_pane' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 32,
-      ),
-      'flexslider_block' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'exclude_cv' => 1,
-    'field_name' => 'field_pd_untertitel_liste',
-    'label' => 'Untertitel Listenansicht',
-    'required' => 0,
-    'settings' => array(
-      'exclude_cv' => FALSE,
-      'linkit' => array(
-        'enable' => 0,
-        'insert_plugin' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 50,
-      ),
-      'type' => 'text_textfield',
       'weight' => 2,
     ),
   );
@@ -748,7 +694,7 @@ function inkshop_content_types_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'ssp_widget',
-      'weight' => 20,
+      'weight' => 13,
     ),
   );
 
@@ -806,13 +752,14 @@ function inkshop_content_types_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'taxonomy',
+      'module' => 'autocomplete_deluxe',
       'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
         'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 9,
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 4,
     ),
   );
 
@@ -878,7 +825,7 @@ function inkshop_content_types_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
@@ -1171,13 +1118,12 @@ function inkshop_content_types_field_default_field_instances() {
   t('Kürzel für die Buchhaltung');
   t('PDFs');
   t('Platzhalter für Social Share Privacy');
-  t('Product Reference');
   t('Product variations');
+  t('Produktreferenz');
   t('Schlagworte (Tags)');
   t('Themen');
   t('Title');
   t('Untertitel');
-  t('Untertitel Listenansicht');
   t('Ähnliche Produkte');
 
   return $field_instances;
