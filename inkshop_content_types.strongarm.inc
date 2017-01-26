@@ -97,6 +97,69 @@ function inkshop_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_page';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_product_display';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_product_display'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_webform';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_page';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_product_display';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_product_display'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_webform';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_page';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_product_display';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_product_display'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_webform';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__page';
   $strongarm->value = array(
     'view_modes' => array(),
@@ -152,6 +215,9 @@ function inkshop_content_types_strongarm() {
       'email_textalt' => array(
         'custom_settings' => FALSE,
       ),
+      'suedlink' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -187,6 +253,10 @@ function inkshop_content_types_strongarm() {
             'weight' => '-10',
             'visible' => FALSE,
           ),
+          'suedlink' => array(
+            'weight' => '28',
+            'visible' => FALSE,
+          ),
         ),
         'product:title' => array(
           'teaser' => array(
@@ -207,6 +277,10 @@ function inkshop_content_types_strongarm() {
           ),
           'checkout_pane' => array(
             'weight' => '-5',
+            'visible' => FALSE,
+          ),
+          'suedlink' => array(
+            'weight' => '29',
             'visible' => FALSE,
           ),
         ),
@@ -231,6 +305,10 @@ function inkshop_content_types_strongarm() {
             'weight' => '5',
             'visible' => FALSE,
           ),
+          'suedlink' => array(
+            'weight' => '31',
+            'visible' => FALSE,
+          ),
         ),
         'product:commerce_price' => array(
           'teaser' => array(
@@ -252,6 +330,10 @@ function inkshop_content_types_strongarm() {
           'checkout_pane' => array(
             'weight' => '3',
             'visible' => TRUE,
+          ),
+          'suedlink' => array(
+            'weight' => '5',
+            'visible' => FALSE,
           ),
         ),
         'product:commerce_stock' => array(
@@ -275,6 +357,10 @@ function inkshop_content_types_strongarm() {
             'weight' => '8',
             'visible' => TRUE,
           ),
+          'suedlink' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
         ),
         'product:field_physical_weight' => array(
           'teaser' => array(
@@ -297,6 +383,10 @@ function inkshop_content_types_strongarm() {
             'weight' => '7',
             'visible' => TRUE,
           ),
+          'suedlink' => array(
+            'weight' => '32',
+            'visible' => FALSE,
+          ),
         ),
         'product:field_product_image' => array(
           'teaser' => array(
@@ -317,6 +407,10 @@ function inkshop_content_types_strongarm() {
           ),
           'checkout_pane' => array(
             'weight' => '5',
+            'visible' => TRUE,
+          ),
+          'suedlink' => array(
+            'weight' => '0',
             'visible' => TRUE,
           ),
         ),
@@ -341,6 +435,10 @@ function inkshop_content_types_strongarm() {
             'weight' => '6',
             'visible' => TRUE,
           ),
+          'suedlink' => array(
+            'weight' => '4',
+            'visible' => TRUE,
+          ),
         ),
         'product:field_product_subtitle' => array(
           'teaser' => array(
@@ -362,6 +460,10 @@ function inkshop_content_types_strongarm() {
           'checkout_pane' => array(
             'weight' => '2',
             'visible' => TRUE,
+          ),
+          'suedlink' => array(
+            'weight' => '2',
+            'visible' => FALSE,
           ),
         ),
         'product:field_product_tax' => array(
@@ -385,6 +487,10 @@ function inkshop_content_types_strongarm() {
             'weight' => '10',
             'visible' => TRUE,
           ),
+          'suedlink' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
         ),
         'product:field_product_weigth' => array(
           'teaser' => array(
@@ -401,6 +507,10 @@ function inkshop_content_types_strongarm() {
           ),
           'aehnliche_produkte' => array(
             'weight' => '18',
+            'visible' => FALSE,
+          ),
+          'suedlink' => array(
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -425,6 +535,10 @@ function inkshop_content_types_strongarm() {
             'weight' => '11',
             'visible' => TRUE,
           ),
+          'suedlink' => array(
+            'weight' => '33',
+            'visible' => FALSE,
+          ),
         ),
         'product:commerce_stock_override' => array(
           'default' => array(
@@ -447,9 +561,17 @@ function inkshop_content_types_strongarm() {
             'weight' => '36',
             'visible' => TRUE,
           ),
+          'suedlink' => array(
+            'weight' => '34',
+            'visible' => FALSE,
+          ),
         ),
         'product:commerce_license_type' => array(
           'teaser' => array(
+            'weight' => '33',
+            'visible' => FALSE,
+          ),
+          'suedlink' => array(
             'weight' => '33',
             'visible' => FALSE,
           ),
@@ -459,10 +581,28 @@ function inkshop_content_types_strongarm() {
             'weight' => '34',
             'visible' => FALSE,
           ),
+          'suedlink' => array(
+            'weight' => '34',
+            'visible' => FALSE,
+          ),
         ),
         'product:commerce_file' => array(
           'teaser' => array(
             'weight' => '35',
+            'visible' => FALSE,
+          ),
+          'suedlink' => array(
+            'weight' => '35',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:commerce_de_vat' => array(
+          'default' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'suedlink' => array(
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),

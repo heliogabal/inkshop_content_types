@@ -27,7 +27,7 @@ function inkshop_content_types_feeds_tamper_default() {
   $export['inkota_product_display_import-category-explode'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'inkota_product_display_import-datasheet-inkota_produkt_import_datasheet';
   $feeds_tamper->importer = 'inkota_product_display_import';
@@ -61,7 +61,7 @@ function inkshop_content_types_feeds_tamper_default() {
   $export['inkota_product_display_import-datasheet-rewrite'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'inkota_produkt_import-datasheet-find_replace';
   $feeds_tamper->importer = 'inkota_produkt_import';
@@ -109,7 +109,7 @@ function inkshop_content_types_feeds_tamper_default() {
   $export['inkota_produkt_import-image-rewrite'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'inkota_produkt_import-price-math';
   $feeds_tamper->importer = 'inkota_produkt_import';
@@ -164,7 +164,7 @@ function inkshop_content_types_feeds_tamper_default() {
   $export['inkota_produkt_import-weight-find_replace'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'inkota_produkt_import-weight-math';
   $feeds_tamper->importer = 'inkota_produkt_import';

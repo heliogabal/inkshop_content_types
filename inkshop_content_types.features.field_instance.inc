@@ -107,6 +107,12 @@ function inkshop_content_types_field_default_field_instances() {
         'type' => 'commerce_cart_add_to_cart_form',
         'weight' => 5,
       ),
+      'suedlink' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'commerce_cart',
@@ -189,6 +195,12 @@ function inkshop_content_types_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'suedlink' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -248,6 +260,12 @@ function inkshop_content_types_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 24,
+      ),
+      'suedlink' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -326,6 +344,12 @@ function inkshop_content_types_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
+      'suedlink' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'field_extractor',
@@ -392,6 +416,12 @@ function inkshop_content_types_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 2,
       ),
+      'suedlink' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -456,6 +486,12 @@ function inkshop_content_types_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 23,
       ),
+      'suedlink' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -516,6 +552,12 @@ function inkshop_content_types_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'suedlink' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -602,6 +644,12 @@ function inkshop_content_types_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 7,
       ),
+      'suedlink' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'field_extractor',
@@ -672,6 +720,12 @@ function inkshop_content_types_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'suedlink' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -733,6 +787,12 @@ function inkshop_content_types_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'suedlink' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -793,6 +853,17 @@ function inkshop_content_types_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 21,
+      ),
+      'suedlink' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => 'h2',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
