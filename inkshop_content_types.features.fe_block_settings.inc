@@ -34,7 +34,7 @@ produkt/*/*',
         'region' => 'content',
         'status' => 1,
         'theme' => 'inkshop',
-        'weight' => 0,
+        'weight' => -33,
       ),
       'omega' => array(
         'region' => '',
@@ -62,7 +62,9 @@ produkt/*/*',
     'module' => 'block',
     'node_types' => array(),
     'pages' => '<front>
-node/1422',
+node/1422
+/produkt/suedlink-inkota-brief/*
+produkt/suedlink-inkota-brief/*',
     'roles' => array(),
     'themes' => array(
       'adminimal' => array(

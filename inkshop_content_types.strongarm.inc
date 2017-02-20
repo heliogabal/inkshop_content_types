@@ -883,8 +883,22 @@ function inkshop_content_types_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_product_display_pattern';
-  $strongarm->value = 'produkt/[node:field_pd_category]/[node:title]';
+  $strongarm->value = 'produkt/[node:field_pd_type]/[node:title]';
   $export['pathauto_node_product_display_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_webform_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_webform_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_buchhaltungs_kuerzel_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_buchhaltungs_kuerzel_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -892,6 +906,13 @@ function inkshop_content_types_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_category_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_category_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_kampagne_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_kampagne_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

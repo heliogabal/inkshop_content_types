@@ -10,23 +10,18 @@
 function inkshop_content_types_wysiwyg_default_profiles() {
   $profiles = array();
 
-  // Exported profile: filtered_html
+  // Exported profile: filtered_html.
   $profiles['filtered_html'] = array(
     'format' => 'filtered_html',
     'editor' => 'ckeditor',
     'settings' => array(
-      'default' => 1,
-      'user_choose' => 0,
-      'show_toggle' => 0,
-      'add_to_summaries' => 1,
-      'theme' => '',
-      'language' => 'de',
       'buttons' => array(
         'default' => array(
           'Bold' => 1,
           'Italic' => 1,
           'BulletedList' => 1,
           'NumberedList' => 1,
+          'Unlink' => 1,
           'Source' => 1,
           'Format' => 1,
           'SpellChecker' => 1,
@@ -42,9 +37,11 @@ function inkshop_content_types_wysiwyg_default_profiles() {
           'media' => 1,
         ),
       ),
+      'theme' => '',
+      'language' => 'de',
       'toolbarLocation' => 'top',
       'resize_enabled' => 1,
-      'default_toolbar_grouping' => 0,
+      'default_toolbar_grouping' => 1,
       'simple_source_formatting' => 1,
       'acf_mode' => 0,
       'acf_allowed_content' => '',
@@ -53,32 +50,34 @@ function inkshop_content_types_wysiwyg_default_profiles() {
       'css_path' => '',
       'stylesSet' => '',
       'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div,hr',
-      'advanced__active_tab' => 'edit-css',
       'forcePasteAsPlainText' => 1,
       'pasteFromWordNumberedHeadingToList' => 0,
       'pasteFromWordPromptCleanup' => 0,
       'pasteFromWordRemoveFontStyles' => 1,
       'pasteFromWordRemoveStyles' => 1,
     ),
+    'preferences' => array(
+      'default' => 1,
+      'user_choose' => 0,
+      'show_toggle' => 0,
+      'add_to_summaries' => 0,
+      'version' => '4.5.6.91e81fe',
+    ),
+    'name' => 'formatfiltered_html',
   );
 
-  // Exported profile: html
+  // Exported profile: html.
   $profiles['html'] = array(
     'format' => 'html',
     'editor' => 'ckeditor',
     'settings' => array(
-      'default' => 1,
-      'user_choose' => 0,
-      'show_toggle' => 0,
-      'add_to_summaries' => 1,
-      'theme' => '',
-      'language' => 'de',
       'buttons' => array(
         'default' => array(
           'Bold' => 1,
           'Italic' => 1,
           'BulletedList' => 1,
           'NumberedList' => 1,
+          'Unlink' => 1,
           'Source' => 1,
           'Table' => 1,
           'SpellChecker' => 1,
@@ -94,6 +93,8 @@ function inkshop_content_types_wysiwyg_default_profiles() {
           'media' => 1,
         ),
       ),
+      'theme' => '',
+      'language' => 'de',
       'toolbarLocation' => 'top',
       'resize_enabled' => 1,
       'default_toolbar_grouping' => 1,
@@ -105,13 +106,20 @@ function inkshop_content_types_wysiwyg_default_profiles() {
       'css_path' => '',
       'stylesSet' => '',
       'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div,table,th,hr,tr,td,caption',
-      'advanced__active_tab' => 'edit-css',
       'forcePasteAsPlainText' => 1,
       'pasteFromWordNumberedHeadingToList' => 0,
       'pasteFromWordPromptCleanup' => 0,
       'pasteFromWordRemoveFontStyles' => 1,
       'pasteFromWordRemoveStyles' => 1,
     ),
+    'preferences' => array(
+      'default' => 1,
+      'user_choose' => 0,
+      'show_toggle' => 0,
+      'add_to_summaries' => 0,
+      'version' => '4.5.6.91e81fe',
+    ),
+    'name' => 'formathtml',
   );
 
   return $profiles;
