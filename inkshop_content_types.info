@@ -185,6 +185,7 @@ features[variable][] = pathauto_transliterate
 features[variable][] = pathauto_user_pattern
 features[variable][] = webform_blocks
 features[variable][] = webform_node_webform
+features[variable][] = xmlsitemap_settings_node_product_display
 features[wysiwyg][] = filtered_html
 features[wysiwyg][] = html
 features[wysiwyg_template][] = finanzhinweis_brot_eed_nsb

@@ -34,7 +34,7 @@ produkt/*/*',
         'region' => 'content',
         'status' => 1,
         'theme' => 'inkshop',
-        'weight' => -33,
+        'weight' => 0,
       ),
       'omega' => array(
         'region' => '',
@@ -54,7 +54,7 @@ produkt/*/*',
   );
 
   $export['block-suedlink_abo_werbung'] = array(
-    'cache' => -1,
+    'cache' => 8,
     'css_class' => '',
     'custom' => 0,
     'icon' => 'a:4:{s:4:"icon";s:0:"";s:7:"wrapper";s:0:"";s:13:"wrapper_class";s:0:"";s:8:"position";s:12:"title_before";}',
@@ -62,9 +62,7 @@ produkt/*/*',
     'module' => 'block',
     'node_types' => array(),
     'pages' => '<front>
-node/1422
-/produkt/suedlink-inkota-brief/*
-produkt/suedlink-inkota-brief/*',
+node/1422',
     'roles' => array(),
     'themes' => array(
       'adminimal' => array(
