@@ -70,29 +70,39 @@ function inkshop_content_types_filter_default_formats() {
         ),
       ),
       'filter_url' => array(
-        'weight' => -47,
+        'weight' => -49,
         'status' => 1,
         'settings' => array(
           'filter_url_length' => 72,
         ),
       ),
       'filter_autop' => array(
-        'weight' => -46,
+        'weight' => -48,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'media_filter_paragraph_fix' => array(
+        'weight' => -47,
         'status' => 1,
         'settings' => array(),
       ),
       'media_filter' => array(
-        'weight' => -42,
+        'weight' => -46,
         'status' => 1,
         'settings' => array(),
       ),
       'filter_htmlcorrector' => array(
-        'weight' => -41,
+        'weight' => -45,
         'status' => 1,
         'settings' => array(),
       ),
       'emptyparagraphkiller' => array(
-        'weight' => -40,
+        'weight' => -44,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'wysiwyg_template_cleanup' => array(
+        'weight' => -42,
         'status' => 1,
         'settings' => array(),
       ),
