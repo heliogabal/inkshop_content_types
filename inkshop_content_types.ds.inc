@@ -154,9 +154,8 @@ function inkshop_content_types_ds_custom_fields_info() {
   $ds_field->ui_limit = '';
   $ds_field->properties = array(
     'code' => array(
-      'value' => '<p>zzgl. <a class="colorbox-node" href="/node/1260?width=900&amp;height=600">Versandkosten</a></p>
-',
-      'format' => 'html',
+      'value' => '<p>inkl. 7% MwSt.<br>zzgl. <a class="colorbox-node" href="/node/1260?width=900&amp;height=600">Versandkosten</a></p>',
+      'format' => 'full_html',
     ),
     'use_token' => 0,
   );
@@ -216,6 +215,112 @@ function inkshop_content_types_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'commerce_order|commerce_order|form';
+  $ds_layout->entity_type = 'commerce_order';
+  $ds_layout->bundle = 'commerce_order';
+  $ds_layout->view_mode = 'form';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'commerce_line_items',
+        1 => 'commerce_order_total',
+        2 => 'commerce_customer_billing',
+        3 => 'commerce_customer_shipping',
+        4 => 'group_commerce_order_note',
+        5 => 'commerce_customer_eu_vat_rc',
+        6 => 'field_commerce_billy_cancel_date',
+        8 => 'field_commerce_order_bemerkungen',
+      ),
+      'hidden' => array(
+        7 => 'field_commerce_billy_i_date',
+        9 => 'field_commerce_order_bankbeleg',
+        10 => '_add_existing_field',
+      ),
+    ),
+    'fields' => array(
+      'commerce_line_items' => 'ds_content',
+      'commerce_order_total' => 'ds_content',
+      'commerce_customer_billing' => 'ds_content',
+      'commerce_customer_shipping' => 'ds_content',
+      'group_commerce_order_note' => 'ds_content',
+      'commerce_customer_eu_vat_rc' => 'ds_content',
+      'field_commerce_billy_cancel_date' => 'ds_content',
+      'field_commerce_billy_i_date' => 'hidden',
+      'field_commerce_order_bemerkungen' => 'ds_content',
+      'field_commerce_order_bankbeleg' => 'hidden',
+      '_add_existing_field' => 'hidden',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+      'ds_hidden' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['commerce_order|commerce_order|form'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'commerce_product|product|form';
+  $ds_layout->entity_type = 'commerce_product';
+  $ds_layout->bundle = 'product';
+  $ds_layout->view_mode = 'form';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title',
+        1 => 'field_product_subtitle',
+        2 => 'sku',
+        3 => 'commerce_price',
+        4 => 'commerce_de_vat',
+        5 => 'field_physical_weight',
+        6 => 'commerce_stock',
+        7 => 'commerce_stock_override',
+        8 => 'field_product_image',
+        9 => 'field_product_pdf',
+      ),
+      'hidden' => array(
+        10 => 'status',
+        11 => '_add_existing_field',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'ds_content',
+      'field_product_subtitle' => 'ds_content',
+      'sku' => 'ds_content',
+      'commerce_price' => 'ds_content',
+      'commerce_de_vat' => 'ds_content',
+      'field_physical_weight' => 'ds_content',
+      'commerce_stock' => 'ds_content',
+      'commerce_stock_override' => 'ds_content',
+      'field_product_image' => 'ds_content',
+      'field_product_pdf' => 'ds_content',
+      'status' => 'hidden',
+      '_add_existing_field' => 'hidden',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+      'ds_hidden' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['commerce_product|product|form'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|product_display|default';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'product_display';
@@ -238,10 +343,10 @@ function inkshop_content_types_ds_layout_settings_info() {
         7 => 'field_tags',
         8 => 'product:commerce_price',
         9 => 'link_zzgl_versandkosten',
-        11 => 'field_commerce_product',
+        10 => 'field_commerce_product',
       ),
       'footer' => array(
-        10 => 'new_field',
+        11 => 'new_field',
         12 => 'field_socialshareprivacy',
       ),
     ),
@@ -256,8 +361,8 @@ function inkshop_content_types_ds_layout_settings_info() {
       'field_tags' => 'right',
       'product:commerce_price' => 'right',
       'link_zzgl_versandkosten' => 'right',
-      'new_field' => 'footer',
       'field_commerce_product' => 'right',
+      'new_field' => 'footer',
       'field_socialshareprivacy' => 'footer',
     ),
     'classes' => array(),
@@ -340,6 +445,40 @@ function inkshop_content_types_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|product_display|suedlink';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'product_display';
+  $ds_layout->view_mode = 'suedlink';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'product:field_product_image',
+        1 => 'title_field',
+        2 => 'product:field_product_pdf',
+      ),
+    ),
+    'fields' => array(
+      'product:field_product_image' => 'ds_content',
+      'title_field' => 'ds_content',
+      'product:field_product_pdf' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+      'ds_hidden' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|product_display|suedlink'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|product_display|teaser';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'product_display';
@@ -388,6 +527,40 @@ function inkshop_content_types_ds_layout_settings_info() {
   );
   $export['node|product_display|teaser'] = $ds_layout;
 
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|webform|default';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'webform';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_suedlink_untertitel',
+        1 => 'field_suedlink_einleitung',
+        2 => 'field_suedlink_abo_berschrift',
+        3 => 'webform',
+      ),
+    ),
+    'fields' => array(
+      'field_suedlink_untertitel' => 'ds_content',
+      'field_suedlink_einleitung' => 'ds_content',
+      'field_suedlink_abo_berschrift' => 'ds_content',
+      'webform' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['node|webform|default'] = $ds_layout;
+
   return $export;
 }
 
@@ -405,6 +578,15 @@ function inkshop_content_types_ds_view_modes_info() {
     'node' => 'node',
   );
   $export['aehnliche_produkte'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'suedlink';
+  $ds_view_mode->label = 'suedlink';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['suedlink'] = $ds_view_mode;
 
   return $export;
 }

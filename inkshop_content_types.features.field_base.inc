@@ -31,6 +31,54 @@ function inkshop_content_types_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
+  // Exported field_base: 'field_abo_geschenk'.
+  $field_bases['field_abo_geschenk'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_abo_geschenk',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => 'Die aktuelle DVD des SWR-Dokumentarfilms HUNGER',
+        1 => 'Die letzten fünf lieferbaren Ausgaben des Südlink (INKOTA-Brief)',
+        2 => 'INKOTA Arbeitsheft zu HUnger, Globalisierung und Landwirtschaft',
+        3 => 'INKOTA-Texte 2: Entschuldung für die Armen?',
+        4 => 'INKOTA-Texte 3: Quickfix. Sozialaudits in Sweatshops',
+        5 => 'Eine Welt im Unterricht Sek. I/II - Tipps, Materialien, Links',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_commerce_order_bemerkungen'.
+  $field_bases['field_commerce_order_bemerkungen'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_commerce_order_bemerkungen',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_commerce_product'.
   $field_bases['field_commerce_product'] = array(
     'active' => 1,

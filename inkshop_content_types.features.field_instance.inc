@@ -92,7 +92,7 @@ function inkshop_content_types_field_default_field_instances() {
           'show_single_product_attributes' => 0,
         ),
         'type' => 'commerce_cart_add_to_cart_form',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'flexslider_block' => array(
         'label' => 'hidden',
@@ -187,7 +187,7 @@ function inkshop_content_types_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 30,
       ),
       'flexslider_block' => array(
         'label' => 'above',
@@ -253,7 +253,7 @@ function inkshop_content_types_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 24,
       ),
       'flexslider_block' => array(
         'label' => 'above',
@@ -336,7 +336,7 @@ function inkshop_content_types_field_default_field_instances() {
           'taxonomy_term_separator' => ' - ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'flexslider_block' => array(
         'label' => 'inline',
@@ -478,7 +478,7 @@ function inkshop_content_types_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 23,
       ),
       'flexslider_block' => array(
         'label' => 'above',
@@ -545,7 +545,7 @@ function inkshop_content_types_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 22,
       ),
       'flexslider_block' => array(
         'label' => 'above',
@@ -636,7 +636,7 @@ function inkshop_content_types_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'flexslider_block' => array(
         'label' => 'inline',
@@ -779,7 +779,7 @@ function inkshop_content_types_field_default_field_instances() {
           'taxonomy_term_separator' => ' - ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'flexslider_block' => array(
         'label' => 'above',
@@ -846,7 +846,7 @@ function inkshop_content_types_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 29,
       ),
       'flexslider_block' => array(
         'label' => 'above',

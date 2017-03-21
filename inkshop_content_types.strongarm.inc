@@ -13,6 +13,62 @@ function inkshop_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_disable_search_threshold';
+  $strongarm->value = '7';
+  $export['chosen_disable_search_threshold'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_minimum_multiple';
+  $strongarm->value = '0';
+  $export['chosen_minimum_multiple'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_minimum_single';
+  $strongarm->value = '7';
+  $export['chosen_minimum_single'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_minimum_width';
+  $strongarm->value = '200';
+  $export['chosen_minimum_width'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_no_results_text';
+  $strongarm->value = 'Keine Ergebnisse';
+  $export['chosen_no_results_text'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_placeholder_text_multiple';
+  $strongarm->value = 'Optionen auswählen';
+  $export['chosen_placeholder_text_multiple'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_placeholder_text_single';
+  $strongarm->value = 'Option auswählen';
+  $export['chosen_placeholder_text_single'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clean_url';
+  $strongarm->value = 1;
+  $export['clean_url'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'clientside_validation_default_settings';
   $strongarm->value = array(
     'validate_options' => array(
@@ -90,9 +146,44 @@ function inkshop_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'colorbox_load';
+  $strongarm->value = TRUE;
+  $export['colorbox_load'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_webform';
   $strongarm->value = '0';
   $export['comment_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_default_timezone';
+  $strongarm->value = 'Europe/Berlin';
+  $export['date_default_timezone'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_first_day';
+  $strongarm->value = '1';
+  $export['date_first_day'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_short';
+  $strongarm->value = 'd.m.Y - H:i';
+  $export['date_format_short'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_ultrakurz';
+  $strongarm->value = 'd.m.Y';
+  $export['date_format_ultrakurz'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -542,7 +633,7 @@ function inkshop_content_types_strongarm() {
         ),
         'product:commerce_stock_override' => array(
           'default' => array(
-            'weight' => '33',
+            'weight' => '32',
             'visible' => FALSE,
           ),
           'flexslider_block' => array(
@@ -598,7 +689,7 @@ function inkshop_content_types_strongarm() {
         ),
         'product:commerce_de_vat' => array(
           'default' => array(
-            'weight' => '4',
+            'weight' => '9',
             'visible' => FALSE,
           ),
           'suedlink' => array(
@@ -683,6 +774,34 @@ function inkshop_content_types_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_compression_type';
+  $strongarm->value = 'min';
+  $export['jquery_update_compression_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_jquery_admin_version';
+  $strongarm->value = '1.5';
+  $export['jquery_update_jquery_admin_version'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_jquery_cdn';
+  $strongarm->value = 'none';
+  $export['jquery_update_jquery_cdn'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_jquery_version';
+  $strongarm->value = '1.7';
+  $export['jquery_update_jquery_version'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -892,6 +1011,13 @@ function inkshop_content_types_strongarm() {
   $strongarm->name = 'pathauto_node_webform_pattern';
   $strongarm->value = '';
   $export['pathauto_node_webform_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_abo_geschenk_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_abo_geschenk_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

@@ -9,6 +9,14 @@
  */
 function inkshop_content_types_taxonomy_default_vocabularies() {
   return array(
+    'abo_geschenk' => array(
+      'name' => 'Abo-Geschenk',
+      'machine_name' => 'abo_geschenk',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
     'buchhaltungs_kuerzel' => array(
       'name' => 'Buchhaltungs-Kürzel',
       'machine_name' => 'buchhaltungs_kuerzel',
