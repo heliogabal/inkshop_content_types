@@ -16,10 +16,30 @@ function inkshop_content_types_default_linkit_profiles() {
   $linkit_profile->name = 'standard';
   $linkit_profile->admin_title = 'Standard';
   $linkit_profile->admin_description = '';
-  $linkit_profile->profile_type = '2';
+  $linkit_profile->profile_type = '1';
   $linkit_profile->data = array(
+    'text_formats' => array(
+      'filtered_html' => 'filtered_html',
+      'full_html' => 'full_html',
+      'html' => 'html',
+      'commerce_order_message' => 0,
+      'plain_text' => 0,
+      'php_code' => 0,
+      'mailchimp_campaign' => 0,
+      'html_e_mail_text_format' => 0,
+      'ds_code' => 0,
+    ),
+    'button_text' => 'Suche',
     'search_plugins' => array(
       'entity:menu_link' => array(
+        'enabled' => 0,
+        'weight' => '-10',
+      ),
+      'entity:file' => array(
+        'enabled' => 0,
+        'weight' => '-10',
+      ),
+      'entity:user' => array(
         'enabled' => 0,
         'weight' => '-10',
       ),
@@ -43,33 +63,25 @@ function inkshop_content_types_default_linkit_profiles() {
         'enabled' => 0,
         'weight' => '-10',
       ),
-      'entity:user' => array(
-        'enabled' => 1,
-        'weight' => '0',
-      ),
-      'entity:file' => array(
-        'enabled' => 1,
-        'weight' => '0',
-      ),
       'entity:taxonomy_term' => array(
-        'enabled' => 1,
-        'weight' => '0',
+        'enabled' => 0,
+        'weight' => '-10',
       ),
       'entity:node' => array(
         'enabled' => 1,
-        'weight' => '0',
+        'weight' => '-10',
       ),
     ),
     'entity:node' => array(
       'result_description' => '',
       'bundles' => array(
-        'product_display' => 0,
-        'page' => 0,
+        'product_display' => 'product_display',
+        'page' => 'page',
         'donation' => 0,
         'webform' => 0,
       ),
-      'group_by_bundle' => 1,
-      'include_unpublished' => 1,
+      'group_by_bundle' => 0,
+      'include_unpublished' => 0,
     ),
     'entity:taxonomy_term' => array(
       'result_description' => '',
@@ -83,7 +95,7 @@ function inkshop_content_types_default_linkit_profiles() {
         'spendenzweck' => 0,
         'buchhaltungs_kuerzel' => 0,
       ),
-      'group_by_bundle' => 1,
+      'group_by_bundle' => 0,
     ),
     'entity:commerce_payment_transaction' => array(
       'result_description' => '',
@@ -97,8 +109,8 @@ function inkshop_content_types_default_linkit_profiles() {
     'entity:commerce_product' => array(
       'result_description' => '',
       'bundles' => array(
+        'product' => 'product',
         'donation' => 0,
-        'product' => 0,
       ),
       'group_by_bundle' => 0,
     ),
@@ -119,7 +131,7 @@ function inkshop_content_types_default_linkit_profiles() {
         'audio' => 0,
         'document' => 0,
       ),
-      'group_by_bundle' => 1,
+      'group_by_bundle' => 0,
       'show_scheme' => 0,
       'group_by_scheme' => 0,
       'url_type' => 'entity',
@@ -148,33 +160,32 @@ function inkshop_content_types_default_linkit_profiles() {
       'group_by_bundle' => 0,
     ),
     'insert_plugin' => array(
-      'plugin' => 'raw_url',
       'url_method' => '1',
     ),
     'attribute_plugins' => array(
+      'accesskey' => array(
+        'enabled' => 1,
+        'weight' => '-10',
+      ),
+      'title' => array(
+        'enabled' => 0,
+        'weight' => '-10',
+      ),
+      'class' => array(
+        'enabled' => 1,
+        'weight' => '-10',
+      ),
+      'id' => array(
+        'enabled' => 0,
+        'weight' => '-10',
+      ),
       'target' => array(
         'enabled' => 1,
         'weight' => '-10',
       ),
-      'accesskey' => array(
-        'enabled' => 1,
-        'weight' => '0',
-      ),
-      'title' => array(
-        'enabled' => 1,
-        'weight' => '0',
-      ),
-      'class' => array(
-        'enabled' => 1,
-        'weight' => '0',
-      ),
-      'id' => array(
-        'enabled' => 0,
-        'weight' => '0',
-      ),
       'rel' => array(
-        'enabled' => 0,
-        'weight' => '0',
+        'enabled' => 1,
+        'weight' => '-10',
       ),
     ),
     'autocomplete' => array(
@@ -183,6 +194,7 @@ function inkshop_content_types_default_linkit_profiles() {
       'remoteTimeout' => '10000',
     ),
   );
+  $linkit_profile->weight = 0;
   $export['standard'] = $linkit_profile;
 
   return $export;
