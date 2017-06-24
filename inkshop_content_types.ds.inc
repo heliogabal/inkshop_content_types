@@ -60,6 +60,21 @@ function inkshop_content_types_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_pd_category' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+    'field_pd_type' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+    'field_tags' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
   );
   $export['node|product_display|default'] = $ds_fieldsetting;
 
@@ -176,7 +191,7 @@ function inkshop_content_types_ds_custom_fields_info() {
   if (!empty($entity->created)) {
     $now = new DateTime();
     $interval = ($now->format(\'U\') - $entity->created) / 86400;
-    if ($interval <= 90) print "<span class=\\"new\\">Neu!</span>";
+    if ($interval <= 60) print "<span class=\\"new\\">Neu!</span>";
   }
 ?>',
       'format' => 'ds_code',
@@ -229,11 +244,11 @@ function inkshop_content_types_ds_layout_settings_info() {
         3 => 'commerce_customer_shipping',
         4 => 'group_commerce_order_note',
         5 => 'commerce_customer_eu_vat_rc',
-        6 => 'field_commerce_billy_cancel_date',
+        6 => 'field_commerce_billy_i_date',
+        7 => 'field_commerce_billy_cancel_date',
         8 => 'field_commerce_order_bemerkungen',
       ),
       'hidden' => array(
-        7 => 'field_commerce_billy_i_date',
         9 => 'field_commerce_order_bankbeleg',
         10 => '_add_existing_field',
       ),
@@ -245,8 +260,8 @@ function inkshop_content_types_ds_layout_settings_info() {
       'commerce_customer_shipping' => 'ds_content',
       'group_commerce_order_note' => 'ds_content',
       'commerce_customer_eu_vat_rc' => 'ds_content',
+      'field_commerce_billy_i_date' => 'ds_content',
       'field_commerce_billy_cancel_date' => 'ds_content',
-      'field_commerce_billy_i_date' => 'hidden',
       'field_commerce_order_bemerkungen' => 'ds_content',
       'field_commerce_order_bankbeleg' => 'hidden',
       '_add_existing_field' => 'hidden',

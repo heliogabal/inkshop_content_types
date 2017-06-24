@@ -143,10 +143,10 @@ function inkshop_content_types_wysiwyg_default_profiles() {
       'pasteFromWordRemoveStyles' => 1,
     ),
     'preferences' => array(
+      'add_to_summaries' => FALSE,
       'default' => 1,
-      'user_choose' => 0,
       'show_toggle' => 0,
-      'add_to_summaries' => 0,
+      'user_choose' => 0,
       'version' => '4.5.6.91e81fe',
     ),
     'name' => 'formatfull_html',

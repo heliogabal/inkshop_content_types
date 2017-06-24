@@ -25,7 +25,7 @@ function inkshop_content_types_default_fe_block_boxes() {
   $fe_block_boxes->machine_name = 'suedlink_abo';
   $fe_block_boxes->body = '<p>Zum Beispiel den Südlink im Probeabo (2 Ausgaben für 6 Euro ohne&nbsp;automatische Verlängerung):</p>
 <p><a href="/node/1422">Südlink-Abo online einrichten</a></p>
-<p><a href="/sites/webshop.inkota.de/files/bestellformular_suedlink_177.pdf">Bestellformular Südlink zum Ausdrucken</a>&nbsp;(PDF, 297 KB)</p>
+<p><a href="/sites/webshop.dev.inkota.de/files/bestellformular_suedlink_177.pdf">Bestellformular Südlink zum Ausdrucken</a>&nbsp;(PDF, 297 KB)</p>
 <h2>Angebot</h2>
 <p>Bei einer Bestellung ab 5 Exemplaren des Südlink (INKOTA-Brief) gibt es 20 Prozent, ab 10 Exemplaren 30 Prozent Rabatt. Der Rabatt wird automatisch beim Checkout berechnet.</p>
 <h2>Ansprechpartner</h2>

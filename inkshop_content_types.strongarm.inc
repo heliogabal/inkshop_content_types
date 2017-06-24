@@ -14,21 +14,21 @@ function inkshop_content_types_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'chosen_disable_search_threshold';
-  $strongarm->value = '7';
+  $strongarm->value = '0';
   $export['chosen_disable_search_threshold'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'chosen_minimum_multiple';
-  $strongarm->value = '0';
+  $strongarm->value = '5';
   $export['chosen_minimum_multiple'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'chosen_minimum_single';
-  $strongarm->value = '7';
+  $strongarm->value = '5';
   $export['chosen_minimum_single'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -800,7 +800,7 @@ function inkshop_content_types_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'jquery_update_jquery_version';
-  $strongarm->value = '1.7';
+  $strongarm->value = '1.8';
   $export['jquery_update_jquery_version'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1103,6 +1103,16 @@ function inkshop_content_types_strongarm() {
     'priority' => '1.0',
   );
   $export['xmlsitemap_settings_node_product_display'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_webform';
+  $strongarm->value = array(
+    'status' => '1',
+    'priority' => '1.0',
+  );
+  $export['xmlsitemap_settings_node_webform'] = $strongarm;
 
   return $export;
 }

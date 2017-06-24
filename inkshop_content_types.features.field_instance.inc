@@ -333,7 +333,7 @@ function inkshop_content_types_field_default_field_instances() {
         'module' => 'ds',
         'settings' => array(
           'taxonomy_term_link' => 0,
-          'taxonomy_term_separator' => ' - ',
+          'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
         'weight' => 5,
@@ -438,8 +438,9 @@ function inkshop_content_types_field_default_field_instances() {
     'settings' => array(
       'exclude_cv' => FALSE,
       'linkit' => array(
+        'button_text' => 'Search',
         'enable' => 0,
-        'insert_plugin' => '',
+        'profile' => '',
       ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -633,9 +634,12 @@ function inkshop_content_types_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_plain',
+        'module' => 'ds',
+        'settings' => array(
+          'taxonomy_term_link' => 0,
+          'taxonomy_term_separator' => ', ',
+        ),
+        'type' => 'ds_taxonomy_separator',
         'weight' => 6,
       ),
       'flexslider_block' => array(
@@ -776,7 +780,7 @@ function inkshop_content_types_field_default_field_instances() {
         'module' => 'ds',
         'settings' => array(
           'taxonomy_term_link' => 0,
-          'taxonomy_term_separator' => ' - ',
+          'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
         'weight' => 7,
@@ -1055,8 +1059,9 @@ function inkshop_content_types_field_default_field_instances() {
     'settings' => array(
       'exclude_cv' => FALSE,
       'linkit' => array(
+        'button_text' => 'Search',
         'enable' => 0,
-        'insert_plugin' => '',
+        'profile' => '',
       ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1108,8 +1113,9 @@ function inkshop_content_types_field_default_field_instances() {
     'settings' => array(
       'exclude_cv' => FALSE,
       'linkit' => array(
+        'button_text' => 'Search',
         'enable' => 0,
-        'insert_plugin' => '',
+        'profile' => '',
       ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -1161,8 +1167,9 @@ function inkshop_content_types_field_default_field_instances() {
     'settings' => array(
       'exclude_cv' => FALSE,
       'linkit' => array(
+        'button_text' => 'Search',
         'enable' => 0,
-        'insert_plugin' => '',
+        'profile' => '',
       ),
       'text_processing' => 0,
       'user_register_form' => FALSE,

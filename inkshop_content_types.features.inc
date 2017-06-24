@@ -93,9 +93,9 @@ function inkshop_content_types_node_info() {
     'webform' => array(
       'name' => t('Webform'),
       'base' => 'node_content',
-      'description' => t('Create a new form or questionnaire accessible to users. Submission results and statistics are recorded and accessible to privileged users.'),
+      'description' => t('Ein neues Formular oder einen neuen Fragebogen für Benutzer erstellen. Eingesendete Daten und Statistiken werden gespeichert und sind berechtigten Benutzern zugänglich.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Anrede'),
       'help' => '',
     ),
   );

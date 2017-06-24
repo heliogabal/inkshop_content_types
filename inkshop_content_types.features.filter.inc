@@ -84,7 +84,9 @@ function inkshop_content_types_filter_default_formats() {
       'media_filter_paragraph_fix' => array(
         'weight' => -47,
         'status' => 1,
-        'settings' => array(),
+        'settings' => array(
+          'replace' => 0,
+        ),
       ),
       'media_filter' => array(
         'weight' => -46,
@@ -240,7 +242,9 @@ function inkshop_content_types_filter_default_formats() {
       'media_filter_paragraph_fix' => array(
         'weight' => -41,
         'status' => 1,
-        'settings' => array(),
+        'settings' => array(
+          'replace' => 0,
+        ),
       ),
       'media_filter' => array(
         'weight' => -40,

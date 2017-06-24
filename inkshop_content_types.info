@@ -219,6 +219,7 @@ features[variable][] = pathauto_user_pattern
 features[variable][] = webform_blocks
 features[variable][] = webform_node_webform
 features[variable][] = xmlsitemap_settings_node_product_display
+features[variable][] = xmlsitemap_settings_node_webform
 features[wysiwyg][] = commerce_order_message
 features[wysiwyg][] = filtered_html
 features[wysiwyg][] = full_html
